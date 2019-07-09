@@ -3,11 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Home</title>
-<link rel="stylesheet" type="text/css"
-	href="//img.tourtips.com/css/pc/common.css?utv=00023528" />
-<link rel="stylesheet" type="text/css"
-	href="//img.tourtips.com/css/pc/main.css?utv=00023528" />
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="//img.tourtips.com/css/pc/common.css?utv=00023528" />
+<link rel="stylesheet" type="text/css" href="//img.tourtips.com/css/pc/main.css?utv=00023528" />
 
 <style type="text/css">
 @charset "UTF-8";
@@ -111,6 +110,12 @@
 </style>
 </head>
 <body>
+<div id="wrap">
+<style>
+.up_close {background:url(//img.tourtips.com/images/common/close_btn_b.png) no-repeat right center; position:absolute; width:38px; height:37px; 
+top:15px; right:30px; cursor:pointer}
+</style>
+<div id="subWrap">
 	<div id="header">
 		<!-- headTop -->
 		<div class="headTop">
@@ -142,8 +147,8 @@
 			<ul>
 				<li><a href="#">Home</a>
 					<ul>
-						<li><a href="views/sliders">Sliders</a></li>
-						<li><a href="#">Galleries</a></li>
+						<li><a href="sliders">Sliders</a></li>
+						<li><a href="galleries">Galleries</a></li>
 						<li><a href="#">Apps</a></li>
 						<li><a href="#">Extensions</a></li>
 					</ul></li>
@@ -171,6 +176,78 @@
 			</ul>
 		</div>
 	</div>
-	</script>
+
+		<div class="lnb" >
+			<h1 class="bigTitle">
+				<a href="#">Home</a>
+			</h1>
+			<ul>
+				<li  class="allNotice on"><a href="sliders">Sliders</a></li>
+				<li><a href="galleries">Galleries</a></li>
+				<li class=""><a href="#">Q&A</a></li>
+				<li class=""><a href="#">아무거나 토크</a></li>
+
+				<li class="myNotice "><a href="/ap/tboard/community/?my=a">
+				내 글 모아보기 (0)<span></span>
+				</a>
+				</li>
+			</ul>
+
+
+
+			<div class="adv">
+				<div class="adsvr" data-zone-id="207" data-option=""></div>
+			</div>
+			<div class="adv">
+				<div class="adsvr" data-zone-id="208" data-option=""></div>
+			</div>
+
+		</div>
+		<!-- //lnb -->
+
+		<!-- contents -->
+		<div class="contents">
+
+			<h2 class="titleSt02">전체 글 보기</h2>
+
+			<!-- searchNotice -->
+			<script type="text/javascript"
+				src="//img.tourtips.com/js/pc/tboard/list.js?utv=00023528"></script>
+
+			<div class="searchNotice">
+				<form action="" method="get">
+
+					<!-- selectBox -->
+
+					<div class="selectBox sltBox" name="search">
+						<p class="cur">
+							<span>제목+내용</span><i class="ico"></i>
+						</p>
+						<ul class="search_type">
+							<li data='0'>제목+내용</li>
+							<li data='1'>제목</li>
+							<li data='2'>작성자</li>
+						</ul>
+					</div>
+					<!-- //selectBox -->
+
+					<!-- searchWord -->
+					<div class="searchWord">
+						<input type="text" name="q" placeholder="입력하세요" value="">
+						<input type="hidden" name="k" id="k" value="0"> <input
+							type="hidden" name="ps" value="20"> <input type="hidden"
+							name="pf" value="">
+
+						<button type="submit">
+							<span>검색하기</span>
+						</button>
+					</div>
+					</form>
+					</div>
+					
+					<!-- //searchWord -->
+					</div>
+					</div>
+					</div>
 </body>
 </html>

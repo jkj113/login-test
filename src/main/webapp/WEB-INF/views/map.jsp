@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page session="false"%>
 <html>
 <head>
 <title>Home</title>
-<link rel="stylesheet" type="text/css"
-	href="//img.tourtips.com/css/pc/common.css?utv=00023528" />
-<link rel="stylesheet" type="text/css"
-	href="//img.tourtips.com/css/pc/main.css?utv=00023528" />
+<link rel="stylesheet" type="text/css" href="//img.tourtips.com/css/pc/common.css?utv=00023528" />
+<link rel="stylesheet" type="text/css" href="//img.tourtips.com/css/pc/main.css?utv=00023528" />
 
 <style type="text/css">
 @charset "UTF-8";
@@ -114,8 +113,8 @@
 	<div id="header">
 		<!-- headTop -->
 		<div class="headTop">
-			<span class="logo"> <a href="#"> <img
-					src="//img.tourtips.com/images/pc/logo/origin.gif" alt="투어팁스">
+			<span class="logo"> <a href="#"> 
+			<img src="//img.tourtips.com/images/pc/logo/origin.gif" alt="투어팁스">
 			</a>
 			</span>
 			<!-- loginArea : 로그인 전 -->
@@ -123,14 +122,11 @@
 				<a href="#">로그인</a> <span>|</span> <a href="#">회원가입</a>
 			</div>
 			<div id="search">
-				<form method="get"
-					action="http://www.tourtips.com/ap/search/search/">
+				<form method="get" action="http://www.tourtips.com/ap/search/search/">
 					<fieldset>
 						<legend>검색</legend>
-						<span class="round"> <input type="text" name="cseq"
-							title="검색어 입력" tabindex="1" style="ime-mode: active;">
-							<button type="submit" name="search" id="search_btn" title="검색"
-								tabindex="2">검색</button>
+						<span class="round"> <input type="text" name="cseq"	title="검색어 입력" tabindex="1" style="ime-mode: active;">
+							<button type="submit" name="search" id="search_btn" title="검색" tabindex="2">검색</button>
 						</span>
 					</fieldset>
 				</form>
@@ -142,7 +138,7 @@
 			<ul>
 				<li><a href="#">Home</a>
 					<ul>
-						<li><a href="views/sliders">Sliders</a></li>
+						<li><a href="#">Sliders</a></li>
 						<li><a href="#">Galleries</a></li>
 						<li><a href="#">Apps</a></li>
 						<li><a href="#">Extensions</a></li>
@@ -171,6 +167,19 @@
 			</ul>
 		</div>
 	</div>
+	<div id="map" style="width: 500px; height: 400px;"></div>
+	<script type="text/javascript"
+		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=49b91ea9e3468a5626607648857446d1"></script>
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+			center : new kakao.maps.LatLng(37.50500105946323, 126.9581314306242),
+			level : 4
+		};
+
+		var map = new kakao.maps.Map(container, options);
 	</script>
+
 </body>
+
 </html>
